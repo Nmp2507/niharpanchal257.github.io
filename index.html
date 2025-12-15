@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nihar Panchal, P.E. - Licensed Professional Electrical Engineer specializing in power systems protection, relay coordination, and renewable energy integration">
-    <meta name="keywords" content="Electrical Engineer, Power Systems, Protection Engineering, P.E. License, Renewable Energy">
-    <title>Nihar Panchal, P.E. | Licensed Electrical Engineer - Power Systems & Protection</title>
+    <title>Nihar Panchal, P.E. | Licensed Electrical Engineer</title>
     <style>
         * {
             margin: 0;
@@ -15,23 +14,23 @@
 
         :root {
             --primary: #0ea5e9;
-            --primary-dark: #0284c7;
             --secondary: #8b5cf6;
             --accent: #06b6d4;
             --success: #10b981;
             --dark: #0f172a;
             --darker: #020617;
             --light: #f1f5f9;
-            --gradient-1: linear-gradient(135deg, #0ea5e9, #8b5cf6);
-            --gradient-2: linear-gradient(135deg, #06b6d4, #10b981);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--darker);
             color: var(--light);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         .navbar {
@@ -43,7 +42,6 @@
             padding: 1rem 2rem;
             z-index: 1000;
             border-bottom: 1px solid rgba(14, 165, 233, 0.1);
-            transition: all 0.3s;
         }
 
         .nav-content {
@@ -57,11 +55,9 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -1px;
         }
 
         .nav-links {
@@ -75,7 +71,6 @@
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
-            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
@@ -87,9 +82,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 100px 2rem 2rem;
             position: relative;
-            overflow: hidden;
-            padding: 6rem 2rem 2rem 2rem;
         }
 
         .hero-background {
@@ -98,22 +92,7 @@
             height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15), transparent 50%),
                         radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15), transparent 50%);
-        }
-
-        .grid-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            z-index: 0;
         }
 
         .hero-content {
@@ -121,7 +100,6 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            padding-top: 0;
         }
 
         .hero-image {
@@ -131,41 +109,34 @@
             margin: 0 auto 1.5rem;
             border: 4px solid var(--primary);
             box-shadow: 0 10px 40px rgba(14, 165, 233, 0.3);
-            animation: fadeInUp 1s ease;
             object-fit: cover;
             display: block;
         }
 
         .pe-badge {
             display: inline-block;
-            background: var(--gradient-2);
+            background: linear-gradient(135deg, var(--accent), var(--success));
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 25px;
             font-weight: 700;
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
-            animation: fadeInUp 1s ease;
-            letter-spacing: 1px;
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease 0.2s backwards;
-            line-height: 1.2;
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--accent);
             margin-bottom: 1rem;
-            animation: fadeInUp 1s ease 0.4s backwards;
             font-weight: 600;
         }
 
@@ -173,56 +144,16 @@
             font-size: 1.15rem;
             color: #cbd5e1;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.6s backwards;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 2rem 0;
-            animation: fadeInUp 1s ease 0.8s backwards;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .cta-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
-            animation: fadeInUp 1s ease 1s backwards;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -238,7 +169,7 @@
         }
 
         .btn-primary {
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
 
@@ -255,32 +186,21 @@
 
         .btn-secondary:hover {
             background: var(--primary);
-            transform: translateY(-2px);
         }
 
         .section {
-            padding: 5rem 2rem;
+            padding: 100px 2rem 5rem;
             max-width: 1200px;
             margin: 0 auto;
-            scroll-margin-top: 100px;
-            padding-top: 100px;
-            min-height: 400px;
-            display: block;
-            visibility: visible;
-        }
-
-        .section:first-of-type {
-            padding-top: 120px;
         }
 
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
             font-weight: 700;
         }
 
@@ -292,194 +212,6 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-text {
-            color: #cbd5e1;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-highlights {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .highlight-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .highlight-content h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .highlight-content p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .credentials-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .credential-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .credential-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
-        }
-
-        .credential-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: var(--gradient-1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-        }
-
-        .credential-title {
-            color: var(--primary);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .credential-details {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-        }
-
-        .experience-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .experience-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .experience-card:hover {
-            border-color: var(--primary);
-            transform: translateX(5px);
-            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
-        }
-
-        .experience-card:hover::before {
-            opacity: 1;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .experience-date {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .experience-company {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .experience-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-list li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            position: relative;
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-
-        .experience-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.2rem;
         }
 
         .skills-grid {
@@ -499,21 +231,12 @@
         .skill-category:hover {
             border-color: var(--primary);
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
         }
 
         .skill-category h3 {
             color: var(--accent);
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-icon {
-            font-size: 1.5rem;
         }
 
         .skill-tags {
@@ -529,43 +252,6 @@
             border-radius: 20px;
             font-size: 0.9rem;
             color: var(--light);
-            transition: all 0.3s;
-        }
-
-        .skill-tag:hover {
-            background: rgba(14, 165, 233, 0.2);
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        .expertise-section {
-            background: rgba(15, 23, 42, 0.4);
-            border-radius: 12px;
-            padding: 3rem;
-            margin-top: 3rem;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .expertise-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .expertise-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .expertise-item p {
-            color: #94a3b8;
-            font-size: 0.9rem;
         }
 
         .projects-grid {
@@ -580,79 +266,28 @@
             border-radius: 12px;
             padding: 2rem;
             transition: all 0.3s;
-            position: relative;
         }
 
         .project-card:hover {
             border-color: var(--primary);
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
-        }
-
-        .project-tag {
-            display: inline-block;
-            background: var(--gradient-1);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
         }
 
         .project-title {
             color: var(--primary);
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .project-date {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
         }
 
         .project-description {
             color: #cbd5e1;
             line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-badge {
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            color: var(--accent);
-        }
-
-        .contact-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-intro {
-            color: #cbd5e1;
-            margin-bottom: 3rem;
-            font-size: 1.15rem;
-            line-height: 1.8;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
         }
 
         .contact-card {
@@ -660,6 +295,7 @@
             border: 1px solid rgba(14, 165, 233, 0.2);
             border-radius: 12px;
             padding: 2rem;
+            text-align: center;
             transition: all 0.3s;
         }
 
@@ -669,60 +305,22 @@
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 1rem;
-            background: var(--gradient-1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .contact-card h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
         }
 
         .contact-card a {
             color: var(--accent);
             text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
         }
 
         .contact-card a:hover {
             color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 3rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .social-link:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
         }
 
         footer {
@@ -733,80 +331,15 @@
             color: #94a3b8;
         }
 
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            color: var(--primary);
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-
-        @media (max-width: 968px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
-            .hero {
-                padding: 5rem 2rem 2rem 2rem;
-            }
-
             .hero-title {
                 font-size: 2.5rem;
             }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
             .nav-links {
                 display: none;
             }
-
             .section {
-                padding: 4rem 1rem;
-                padding-top: 100px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .hero-image {
-                width: 150px;
-                height: 150px;
+                padding: 80px 1rem 3rem;
             }
         }
     </style>
@@ -816,8 +349,6 @@
         <div class="nav-content">
             <div class="logo">NIHAR PANCHAL</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -827,188 +358,151 @@
 
     <section class="hero">
         <div class="hero-background"></div>
-        <div class="grid-overlay"></div>
         <div class="hero-content">
             <img src="nihar.jpg" alt="Nihar Panchal" class="hero-image">
             <div class="pe-badge">🎓 LICENSED PROFESSIONAL ENGINEER</div>
-            <h1 class="hero-title">Nihar Maheshkumar Panchal, P.E.</h1>
+            <h1 class="hero-title">Nihar Panchal, P.E.</h1>
             <p class="hero-subtitle">Senior Electrical Engineer</p>
             <p class="hero-description">
-                Licensed Professional Engineer with specialized expertise in power systems protection, relay coordination, 
-                substation design, and renewable energy integration. Delivering cutting-edge electrical engineering solutions 
-                for utility-scale wind and solar projects across North America.
+                Licensed Professional Engineer with specialized expertise in power systems protection, relay coordination,
+                and renewable energy integration
             </p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">P.E.</div>
-                    <div class="stat-label">Licensed Engineer</div>
-                </div>
-            </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Get In Touch</a>
                 <a href="https://www.linkedin.com/in/niharpanchal257/" target="_blank" class="btn btn-secondary">View LinkedIn</a>
             </div>
         </div>
-        <div class="scroll-indicator">↓</div>
     </section>
 
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Licensed Professional Engineer committed to advancing sustainable energy infrastructure through innovative electrical engineering solutions</p>
-        
-        <div class="about-content">
-            <div class="about-text">
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <img src="nihar.jpg" alt="Nihar Panchal, P.E." style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3); object-fit: cover;">
-                </div>
-                <p>
-                    As a Licensed Professional Engineer (P.E.) with over five years of specialized experience in power systems engineering, 
-                    I bring comprehensive expertise in protection and coordination studies, relay settings development, and substation design 
-                    for utility-scale renewable energy projects. My career has been dedicated to ensuring the safety, reliability, and 
-                    efficiency of electrical power systems across wind and solar installations throughout the United States.
-                </p>
-                <p>
-                    I hold a Master of Engineering in Electrical Engineering from the University of Idaho and a Bachelor of Technology 
-                    in Electrical Engineering from Indus University, India. My technical foundation is built on rigorous coursework in 
-                    power system protection, relaying, power quality, and utility applications of power electronics.
-                </p>
-                <p>
-                    Throughout my professional journey, I have successfully delivered protection schemes for numerous 115kV, 230kV, and 345kV 
-                    substations, ensuring compliance with IEEE, NERC, and NFPA standards. My expertise extends to arc flash analysis, 
-                    harmonic studies, short circuit analysis, and the implementation of sophisticated protection logics using industry-leading 
-                    relay systems including SEL and GE platforms.
-                </p>
-            </div>
-
-            <div class="about-highlights">
-                <div class="highlight-item">
-                    <div class="highlight-icon">⚡</div>
-                    <div class="highlight-content">
-                        <h4>Power Systems Protection</h4>
-                        <p>Expert in developing protection philosophies, relay coordination studies, and implementing advanced protection schemes for transmission and distribution systems.</p>
-                    </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">🔋</div>
-                    <div class="highlight-content">
-                        <h4>Renewable Energy Integration</h4>
-                        <p>Specialized in electrical engineering solutions for utility-scale wind and solar farm substations, ensuring seamless grid integration and compliance.</p>
-                    </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">🛡️</div>
-                    <div class="highlight-content">
-                        <h4>Safety & Compliance</h4>
-                        <p>Proficient in arc flash analysis, NERC compliance, and ensuring all designs meet stringent IEEE, NFPA, and utility-specific standards.</p>
-                    </div>
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Comprehensive expertise across power systems and electrical engineering</p>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Power System Analysis</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">SKM Power*Tools</span>
+                    <span class="skill-tag">ASPEN OneLiner</span>
+                    <span class="skill-tag">PSCAD/EMTDC</span>
+                    <span class="skill-tag">PSS/E</span>
+                    <span class="skill-tag">PowerWorld</span>
+                    <span class="skill-tag">ETAP</span>
                 </div>
             </div>
-        </div>
-
-        <div class="credentials-section">
-            <div class="credential-card">
-                <div class="credential-icon">📜</div>
-                <h3 class="credential-title">Professional Engineer License</h3>
-                <p class="credential-details">Licensed P.E. authorized to approve, sign, and seal engineering designs and documents</p>
+            <div class="skill-category">
+                <h3>Protection & Relays</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">acSELerator QuickSet</span>
+                    <span class="skill-tag">GE Enervista</span>
+                    <span class="skill-tag">SEL-351S</span>
+                    <span class="skill-tag">SEL-751</span>
+                    <span class="skill-tag">SEL-787</span>
+                    <span class="skill-tag">SEL-487E</span>
+                    <span class="skill-tag">Protection Logic</span>
+                </div>
             </div>
-            <div class="credential-card">
-                <div class="credential-icon">🎓</div>
-                <h3 class="credential-title">Master of Engineering</h3>
-                <p class="credential-details">University of Idaho - Electrical Engineering (GPA: 3.6)</p>
+            <div class="skill-category">
+                <h3>Design & CAD</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AutoCAD Electrical</span>
+                    <span class="skill-tag">Eagle CAD</span>
+                    <span class="skill-tag">Control Schematics</span>
+                    <span class="skill-tag">Panel Design</span>
+                </div>
             </div>
-            <div class="credential-card">
-                <div class="credential-icon">✓</div>
-                <h3 class="credential-title">Industry Certifications</h3>
-                <p class="credential-details">SEL Relays CBT 101, APP RTAC, Arc Flash Evaluation (SKM 201 & 202)</p>
+            <div class="skill-category">
+                <h3>Standards & Compliance</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">IEEE Standards</span>
+                    <span class="skill-tag">NERC Reliability</span>
+                    <span class="skill-tag">NFPA 70E</span>
+                    <span class="skill-tag">Arc Flash Analysis</span>
+                    <span class="skill-tag">DNP3 / Modbus</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
-        <h2 class="section-title">Professional Experience</h2>
-        <p class="section-subtitle">Proven track record of delivering high-quality electrical engineering solutions for critical power infrastructure projects</p>
-        
-        <div class="experience-grid">
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Senior Electrical Engineer</h3>
-                        <p class="experience-company">Axial Energy Services LLC | Ranson, WV</p>
-                    </div>
-                    <span class="experience-date">April 2025 – Present</span>
-                </div>
-                <ul class="experience-list">
-                    <li>Conduct comprehensive quality control reviews for wind farm substation electrical drawing packages, ensuring accuracy, completeness, and compliance with industry standards and client specifications</li>
-                    <li>Develop detailed protection philosophy reports for wind farm substations, encompassing various protection schemes including differential, distance, overcurrent, and directional protection for SEL-351S, SEL-751, SEL-787, and SEL-487E relay systems</li>
-                    <li>Prepare and validate relay settings and coordination studies for wind farm substations, delivering complete relay setting files, coordination time-current curves (TCCs), and professionally formatted relay labels</li>
-                    <li>Provide technical guidance and mentorship to engineering teams, implementing best practices to enhance overall quality of substation electrical and physical drawing packages</li>
-                    <li>Perform rigorous quality control for critical electrical studies including load flow analysis, short circuit studies, arc flash hazard assessments, and harmonic analysis to ensure compliance with IEEE and NERC requirements</li>
-                </ul>
+    <section id="projects" class="section">
+        <h2 class="section-title">Notable Projects</h2>
+        <p class="section-subtitle">Academic and technical projects demonstrating innovation</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 class="project-title">Induction Motor Fault Detection</h3>
+                <p class="project-description">
+                    Developed comprehensive induction machine model in MATLAB Simulink to analyze stator inter-turn faults.
+                    Conducted extensive testing of negative sequence current and third harmonic effects on machine parameters.
+                </p>
             </div>
-
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Engineer 2</h3>
-                        <p class="experience-company">Black & Veatch | Gaithersburg, MD</p>
-                    </div>
-                    <span class="experience-date">May 2023 – March 2025</span>
-                </div>
-                <ul class="experience-list">
-                    <li>Designed and developed comprehensive panel elevation drawings for greenfield radial and ring bus 115kV and 230kV substations, including line relay panels, transformer protection panels, and feeder relay panels with detailed Bill of Materials (BOM)</li>
-                    <li>Created sophisticated AC and DC control schematics for circuit breakers, incorporating trip coil, close coil, heater, and receptacle circuits for both 115kV and 230kV substation applications</li>
-                    <li>Executed detailed AC load calculations to accurately determine station service transformer (SST) sizing requirements for feeding critical substation AC loads including yard lighting, power outlets, panel outlets, circuit breaker heaters/motors, and battery charger systems</li>
-                    <li>Performed comprehensive DC load calculations to determine optimal station DC battery sizing and configuration for supplying essential DC loads such as protection relays, circuit breaker trip/close coils, and lockout relays</li>
-                    <li>Collaborated with senior engineers to develop standardized line relay panel designs for clients, encompassing panel elevations, AC/DC schematics, fuse selection criteria, and terminal block wiring diagrams</li>
-                    <li>Prepared detailed cable schedules for substation projects, including specifications for AC/DC power cables, control cables, communication cables, and current transformer (CT)/potential transformer (PT) instrument cables</li>
-                    <li>Developed equipment Purchase Requisition (PR) forms and technical specifications for various substation equipment including circuit breakers, disconnect switches, and associated switchgear components</li>
-                    <li>Contributed to the development of technical and commercial proposals for 230kV greenfield substation projects, supporting business development initiatives</li>
-                </ul>
+            <div class="project-card">
+                <h3 class="project-title">VSC-Based HVDC System Protection</h3>
+                <p class="project-description">
+                    Created VSC-based HVDC system in ATP Draw with control schemes. Studied system response to AC and DC faults,
+                    implementing protection schemes with IGBT circuit breakers and ETO devices.
+                </p>
             </div>
-
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Engineer 1</h3>
-                        <p class="experience-company">Applied High Voltage, LLC | Frederick, MD</p>
-                    </div>
-                    <span class="experience-date">January 2020 – April 2023</span>
-                </div>
-                <ul class="experience-list">
-                    <li>Developed comprehensive power system models for various solar farm substations in SKM Power*Tools software and performed detailed short circuit studies to determine appropriate circuit breaker interrupting capabilities ranging from 15kA to 63kA</li>
-                    <li>Conducted reactive power studies and analysis to optimize capacitor bank sizing for solar farm substations, ensuring compliance with utility interconnection requirements and maintaining power factor within acceptable limits</li>
-                    <li>Performed comprehensive harmonic analysis for 138kV, 230kV, and 345kV solar farm substations using SKM software, verifying individual current harmonic distortion levels against IEEE 519 limits and designing passive harmonic filters to mitigate harmonics effectively</li>
-                    <li>Developed detailed substation models in ASPEN OneLiner software and executed protection and coordination studies between various protective devices within substations and between remote stations, generating comprehensive Time-Current Characteristic (TCC) curves</li>
-                    <li>Designed and implemented sophisticated protection logic schemes for SEL-351S, SEL-751, SEL-787, SEL-487E, SEL-387A, SEL-735, SEL-411L, and SEL-311C relays using acSELerator QuickSet software, as well as GE L90 relays using GE Enervista software</li>
-                    <li>Calculated precise relay pickup values for feeder protection, high-side breaker failure schemes, transformer protection, and transmission line protection incorporating overcurrent, time overcurrent, under/over voltage, under/over frequency, differential, and distance protection elements in full compliance with NERC reliability standards</li>
-                    <li>Conducted arc flash hazard analysis using SKM software to determine incident energy levels at various equipment locations, specified appropriate Personal Protective Equipment (PPE) categories, and generated compliant arc flash warning labels per NFPA 70E standards</li>
-                    <li>Developed preliminary teleprotection schemes utilizing RFL GARD 8000 and RFL GARD Pro devices to implement pilot wire and fiber-optic protection schemes for transmission lines between local and remote substations</li>
-                    <li>Prepared and reviewed preliminary and final protection single-line diagrams, finalizing protection component selection and protection schemes for multiple utility-scale solar farm substation projects</li>
-                    <li>Developed and conducted technical reviews of electrical drawings including single-line diagrams, three-line diagrams, AC/DC control schematics, communication diagrams, and panel wiring diagrams using AutoCAD Electrical</li>
-                    <li>Prepared comprehensive DC load analysis reports for various voltage level solar farm substations to accurately select station DC battery systems and battery charger equipment, ensuring adequate backup power duration</li>
-                    <li>Calculated detailed AC load estimates and prepared reports to determine appropriate station service transformer sizing based on connected load demand and future expansion requirements</li>
-                    <li>Reviewed and validated communication architecture diagrams for substation relay networks including SEL-RTAC (Real-Time Automation Controller), SEL-2440 (DPAC), SEL-2407/2480 (GPS Clock synchronization), and SEL-2730M Ethernet switches, ensuring proper communication port assignments for Ethernet and serial communication interfaces (RS-232/485)</li>
-                </ul>
+            <div class="project-card">
+                <h3 class="project-title">DC-DC Boost Converter Design</h3>
+                <p class="project-description">
+                    Engineered complete boost converter (5V to 10V, 11W) with optimized component parameters. Created PCB layout
+                    in Eagle CAD and successfully assembled physical prototype.
+                </p>
             </div>
+            <div class="project-card">
+                <h3 class="project-title">Automated Color Mixing System</h3>
+                <p class="project-description">
+                    Developed automated industrial control system using Allen Bradley MicroLogix 1400x PLC. Designed ladder logic
+                    for proportional color mixing with SCADA interface for process monitoring.
+                </p>
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">Smart Conveyor Belt System</h3>
+                <p class="project-description">
+                    Designed energy-efficient conveyor belt using ATmega328P microcontroller with proximity sensors. Calculated
+                    potential annual savings of 6,480 kWh for standard industrial operation.
+                </p>
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">Real-Time Power System Simulation</h3>
+                <p class="project-description">
+                    Created diverse power system models in RSCAD for comprehensive real-time simulation on RTDS platform.
+                    Validated protection schemes through hardware-in-the-loop testing.
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Graduate Research Assistant</h3>
-                        <p class="experience-company">University of Idaho | Moscow, ID</p>
-                    </div>
-                    <span class="experience-date">August 2018 – May 2019</span>
-                </div>
-                <ul class="experience-list">
-                    <li>Conducted hands-on testing and configuration of SEL-351, SEL-487, SEL-411L, and SEL-421 protective relays in the power systems laboratory, developing proficiency in relay setting and testing procedures</li>
-                    <li>Programmed relay settings using acSELerator QuickSet software for various protection applications including overcurrent, differential, and distance protection schemes</li>
-                    <li>Developed diverse power system models in RSCAD configuration files and executed real-time simulations on the Real-Time Digital Simulator (RTDS) platform to analyze system behavior under various operating conditions and fault scenarios</li>
-                    <li>Conducted research on advanced protection schemes and validated protection coordination strategies through comprehensive RTDS simulations</li>
+    <section id="contact" class="section">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Open to discussing new opportunities and collaborative projects</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:niharpanchal257@gmail.com">niharpanchal257@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <a href="tel:+16317596323">+1 (631) 759-6323</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/niharpanchal257/" target="_blank">View Profile</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p style="color: var(--accent);">Ranson, WV 25438</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Nihar Maheshkumar Panchal, P.E.</p>
+        <p>Licensed Professional Electrical Engineer</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 All rights reserved</p>
+    </footer>
+</body>
+</html>
