@@ -284,6 +284,82 @@
             line-height: 1.7;
         }
 
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .experience-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .experience-company {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+
+        .experience-date {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-list li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .experience-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .about-text {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -349,6 +425,8 @@
         <div class="nav-content">
             <div class="logo">NIHAR PANCHAL</div>
             <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -370,6 +448,90 @@
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Get In Touch</a>
                 <a href="https://www.linkedin.com/in/niharpanchal257/" target="_blank" class="btn btn-secondary">View LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Licensed Professional Engineer committed to advancing sustainable energy infrastructure</p>
+        <div class="about-text">
+            <p>
+                As a Licensed Professional Engineer (P.E.) with over five years of specialized experience in power systems engineering,
+                I bring comprehensive expertise in protection and coordination studies, relay settings development, and substation design
+                for utility-scale renewable energy projects. My career has been dedicated to ensuring the safety, reliability, and
+                efficiency of electrical power systems across wind and solar installations throughout the United States.
+            </p>
+            <p>
+                I hold a Master of Engineering in Electrical Engineering from the University of Idaho and a Bachelor of Technology
+                in Electrical Engineering from Indus University, India. My technical foundation is built on rigorous coursework in
+                power system protection, relaying, power quality, and utility applications of power electronics.
+            </p>
+            <p>
+                Throughout my professional journey, I have successfully delivered protection schemes for numerous 115kV, 230kV, and 345kV
+                substations, ensuring compliance with IEEE, NERC, and NFPA standards. My expertise extends to arc flash analysis,
+                harmonic studies, short circuit analysis, and the implementation of sophisticated protection logics using industry-leading
+                relay systems including SEL and GE platforms.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Proven track record delivering high-quality electrical engineering solutions</p>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Senior Electrical Engineer</h3>
+                        <p class="experience-company">Axial Energy Services LLC | Ranson, WV</p>
+                    </div>
+                    <span class="experience-date">April 2025 – Present</span>
+                </div>
+                <ul class="experience-list">
+                    <li>Conduct comprehensive quality control reviews for wind farm substation electrical drawing packages</li>
+                    <li>Develop detailed protection philosophy reports for wind farm substations with various SEL relay protection schemes</li>
+                    <li>Prepare and validate relay settings and coordination studies with complete relay setting files and labels</li>
+                    <li>Provide technical guidance to engineering teams on substation design quality improvement</li>
+                    <li>Perform quality control for load flow, short circuit, and arc flash studies ensuring IEEE and NERC compliance</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Engineer 2</h3>
+                        <p class="experience-company">Black & Veatch | Gaithersburg, MD</p>
+                    </div>
+                    <span class="experience-date">May 2023 – March 2025</span>
+                </div>
+                <ul class="experience-list">
+                    <li>Designed panel elevation drawings for 115kV and 230kV substations including relay panels with BOM</li>
+                    <li>Created AC and DC control schematics for circuit breakers with trip/close coil circuits</li>
+                    <li>Performed AC/DC load calculations for station service transformer and battery sizing</li>
+                    <li>Developed line relay panel standards including elevations, schematics, and wiring diagrams</li>
+                    <li>Prepared equipment specifications and PR forms for substation components</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Engineer 1</h3>
+                        <p class="experience-company">Applied High Voltage, LLC | Frederick, MD</p>
+                    </div>
+                    <span class="experience-date">January 2020 – April 2023</span>
+                </div>
+                <ul class="experience-list">
+                    <li>Developed solar farm substation models in SKM and performed short circuit studies for circuit breaker sizing</li>
+                    <li>Conducted harmonic analysis for 138kV-345kV substations ensuring IEEE 519 compliance and designed filters</li>
+                    <li>Performed protection and coordination studies using ASPEN OneLiner with TCC curve generation</li>
+                    <li>Implemented protection logic for SEL-351S, SEL-751, SEL-787, SEL-487E and GE L90 relays</li>
+                    <li>Calculated relay pickup values for overcurrent, differential, and distance protection per NERC requirements</li>
+                    <li>Performed arc flash analysis and created NFPA 70E compliant PPE labels</li>
+                    <li>Developed teleprotection schemes using RFL GARD devices for transmission line protection</li>
+                    <li>Created electrical drawings including single-line diagrams, AC/DC schematics, and panel wiring diagrams</li>
+                </ul>
             </div>
         </div>
     </section>
